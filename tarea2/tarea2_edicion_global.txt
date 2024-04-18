@@ -1,0 +1,29 @@
+tarea2_edicion_global
+
+Julián González Betancur B22877
+
+
+12. Match the layers—Link, Network, and Transport—with the guarantees that each layer could provide to higher layers
+
+Respuesta:
+
+El apareamiento correcto sería justamente el proporcionado en el libro:
+
+Guarantee 				Layer
+Best effort delivery 			Network
+Reliable Delivery 			Transport
+In-order Delivery 			Transport
+Byte-stream abstraction 		Transport
+Point-to-point link abstraction 	Data link
+
+13.Suppose that two network endpoints have a round-trip time of 100 milliseconds, and that the sender transmits five packets every round trip. What will be the sender’s trans- mission rate for this round-trip time, assuming 1500-byte packets? Give your answer in bytes per second.
+
+Respuesta:
+
+Por cada round trip tenemos 5 paquetes de 1500 bytes, lo que suma un total de 7500 bytes por round trip. Si cada round trip dura 100ms, en 1s se hacen 10 round trips, así que la tasa de transmisión de datos sería 75000 bytes por segundo, o lo que es lo mismo: 75 kilobytes/segundo.
+
+25.The subnet of Fig. 1-12(b) was designed to withstand a nuclear war. How many bombs would it take to partition the nodes into two disconnected sets? Assume that any bomb wipes out a node and all of the links connected to it.
+
+Respuesta:
+
+Se necesitan al menos 3 bombas para generar 2 conjuntos de nodos incomunicados entre ellos.
