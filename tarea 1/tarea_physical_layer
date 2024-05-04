@@ -1,0 +1,22 @@
+1. Es más estrecha porque un grupo más reducido de longitudes de onda utilizadas en la comunicación. La razón de que sea de de ese grosor específico es que
+esas longitudes de onda tienen la misma atenuación, lo que permite utilizarlas de igual forma en el mismo medio de propagación.
+
+2. Utilizando el teorema de Nyquist:
+
+Max. data rate = 2B log2V bits/sec = 2 * 6 * 10⁶ * log2(4) = 24 Mbits/s
+
+3. Utilizando la modificación de Shannon al teorema de Nyquist, tenemos que:
+
+Max. data rate = B log2(1 + S/N) bits/sec = 3 * 10³ * log2(1 + 100) bits/sec = 3 * 10³ * 6.66 bits/sec = 19.98 * 10³ bits/sec = 19.98 Kbits/s
+
+4. Una celda hexagonal tiene 6 celdas vecinas, es decir, contando con la misma celda, son 7 celdas en las que no deben repetirse frecuencias.
+Por lo tanto, el total de las 840 frecuencias deben repartirse entre las 7 celdas. Lo anterior nos deja con un total de 120 frecuencias por celda y que no se repitan.
+Eso, asumiendo que el sistema se repite y que cada una de las 6 celdas vecinas de una celda, también tendrá 6 vecinas, es decir, este es el caso para escalar.
+
+5. Si calculamos el área de cada célda como la de un círculo, sería:
+
+área = pi * (diametro/2)² ≈ 7854m2 
+
+Dividimos el área de San José entre el área de una celda y obtenemos el número de celdas:
+
+celdas = 45km²/7854m²= 45000000m²/7854m² = 5730
