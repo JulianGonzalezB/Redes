@@ -1,0 +1,34 @@
+12. Five routers are to be connected in a point-to-point subnet. Between each pair of routers, the designers may put a high-speed line, a medium-speed line, a low-speed line, or no line. If it takes 50 ms of computer time to generate and inspect each topology, how long will it take to inspect all of them?
+
+Respuesta:
+
+Dado que en un sistema con 5 routers tenemos 10 pares de routers (Lo cual representa una combinatoria de 5 tomando 2), y dado que tenemos 4 posibilidades de tipos de cableado (por simplicidad estoy tomando la no conexión como un tipo de cable), el problema se resuelve con la siguiente fórmula:
+
+Número de topologías = Número de tipos de cable ^ pares de routers
+
+lo que es igual a:
+
+topologias = 4^10 = 1048576
+
+Ahora multiplicamos el tiempo que toma crear y revisar una topología y lo multiplicamos por el número de topologías a probar:
+
+tiempo total = 1048675 * 50ms = 52428800ms
+
+
+
+13. A group of 2^n - 1 routers are interconnected in a centralized binary tree, with a router at each tree node. Router i communicates with router j by sending a message to the root of the tree. The root then sends the message back down to j. Derive an approximate expression for the mean number of hops per message for large n, assuming that all router pairs are equally likely.
+
+Respuesta:
+
+Ya que el número de routers en el sistema está dado por (2^n) - 1, la altura de un árbol binario es aproximadamente n - 1. Por lo tanto, en el peor de los casos, un mensaje haría n - 1 saltos para pasar de una hoja hasta la raíz del árbol, y n - 1 saltos para bajar de la raíz a la hora destino. En un sistema muy grande esperaríamos que sea común la comunicación entre routers muy lejanos, por lo que el promedio debería ser algo cercano a 2(n - 1) ya que tenemos que contar tanto la subida a la raíz como la bajada.
+
+
+25. Which of the OSI layers and TCP/IP layers handles each of the following:
+(a) Dividing the transmitted bit stream into frames.
+(b) Determining which route through the subnet to use.
+
+Respuesta:
+
+(a) La capa de Datalink
+(b) La capa de Network
+
