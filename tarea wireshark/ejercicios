@@ -1,0 +1,72 @@
+PRIMER EJERCICIO
+
+1-a. La IP del cliente es: 131.247.95.216
+
+1-b. El nombre del sitio buscado es www.google.com y el DNS le da las siguientes opciones:
+    - 64.233.161.99
+    - 64.233.161.104
+    - 64.233.161.147
+
+1-c. Está ocurriendo el handshake de 3 pasos
+
+1-d. El el frame 6 el cliente solicita la página que quiere ver con el GET, y en el 7 el servidor le da un ACK de que recibió la información.
+
+1-f. El frame 9 es el reensamble de los paquetes para el frame 10, que es el html de la página solicitada.
+
+1-g. En el frame 11 el cliente envía un mensaje de "recibido" (ACK) del mensaje en el frame 10.
+
+1-h. Parece ser que está ocurriendo porque la página requiere de que se muestre un gif que se llama logo.gif y el cliente lo solicita automáticamente para
+poder desplegar la página correctamente.
+
+1-i. Del frame 13 al frame 22 ocurre un ACK de la solicitud del gif por parte del servidor y comienza un reensamblaje de paquetes y
+mensajes de parte del cliente de tipo ACK para avisar que está recibiendo la información.
+
+1-j. Del 23 al 26 el cliente solicita el favicon, el servidor hace un ACK a esa solicitud, luego envía el favicon y el cliente da su ACK para avisar
+que lo recibió.
+
+1-k. El cliente quiere acceder a una página web.
+
+
+
+SEGUNDO EJERCICIO
+
+2-a. El cname es www.yahoo.com y dos posibles IPs son: 216.109.117.106 y 216.109.117.109
+
+2-b. Toma 16 paquetes obtener la respuesta completa.
+
+2-c. Sí utiliza gzip y deja una cookie.
+
+2-d. El cliente necesita información complementaria para la página que está cargando. Esta información está en otro servidor. El nombre del servidor
+es us.js2.yimg.com. Entonces consulta al DNS si lo conoce y en el frame 27 el DNS le contesta.
+
+2-e. En realidad son diferentes, probablemente son servidores en la misma red y tienen funciones muy específicas pero relacionadas.
+
+2-f. En ambos frames el host es el mismo, lo que quiere decir que no es necesario volver a hacer la consulta DNS.
+
+2-g. Los paquetes pueden llegar en orden o en desorden. En este caso, el frame 139 será parte del reensamblado del frame 160, pero del 141 al 143
+no son parte de ese mismo reensamble, pero el cliente tiene la capacidad de ordenarlos.
+
+2-h. Al ver que el ACK del frame 134 coincide con el Seq del HTTP del frame 142 puede determinarse que el frame 142 es la respuesta al GET del
+frame 134. Lo mismo ocurre con el GET del frame 133 y el HTTP del frame 141.
+
+
+
+TERCER EJERCICIO
+
+3-a. En el frame 3, el puerto destino es el puerto 80, mientras que en el frame 12 el puerto destino es el 443. Esto significa que el request
+hecho en el frame 3 es de tipo http, mientras que en el frame 12 es de tipo https.
+
+3-b. Lo que podemos ver en los frames 13-20 es la comunicación entre el cliente y el servidor que permite la creación del canal seguro.
+En esta comunicación, por ejemplo, se presentan los certificados de seguridad. En otras palabras, es comunicación SSL.
+
+3-c. Se debe a que el frame 6 hace una petición a un sitio web, mientras que la conexión que se refleja en el frame 21 es de otro tipo de
+comunicación entre cliente y servidor.
+
+
+
+CUARTO EJERCICIO
+
+4-a. Como puede verse en captura-flujo.png (consulta realizada en firefox), el comportamiento de la consulta es diferente a lo visto en esta tarea.
+Primero, no se registra ninguna consulta al DNS, probablemente porque la página se encuentra cargada en caché. Sin embargo, en los frames
+6-8 se puede observar el handshake de tres partes con el servidor de la ecci. Posteriormente no se encuentran más elementos
+relacionados a esta consulta.
