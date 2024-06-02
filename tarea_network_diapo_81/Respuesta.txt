@@ -1,0 +1,36 @@
+Ordenando de mayor a menos rango y entregando de menor a mayor IP:
+
+Rango B: 127 direcciones
+
+Para 127 direcciones necesitamos un bloque de 128 direcciones.
+Desde 192.168.24.0 hasta 192.168.24.127
+expresable también como: 192.168.24.0/25
+
+
+Rango E: 63 direcciones
+
+Para 63 direcciones necesitamos un bloque de 64 direcciones.
+Desde 192.168.24.128 hasta 192.168.24.191
+expresable también como: 192.168.24.128/26
+
+Rango C: 30 direcciones
+
+Para 30 direcciones necesitamos un bloque de 32 direcciones.
+Desde 192.168.24.192 hasta 192.168.24.223
+expresable también como: 192.168.24.192/27
+
+Rango A: 16 direcciones
+
+Para 16 direcciones necesitamos un bloque de 16 direcciones.
+Desde 192.168.24.224 hasta 192.168.24.239
+expresable también como: 192.168.24.224/28
+
+Rango D: 15 direcciones
+
+Para 15 direcciones necesitamos un bloque de 16 direcciones.
+Desde 192.168.24.240 hasta 192.168.24.255
+expresable también como: 192.168.24.240/28
+
+Rango F: 7 direcciones
+
+Dado que ya alcanza el 255, no pueden asignarse más IPs en esta subred.
