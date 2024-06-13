@@ -1,0 +1,81 @@
+Julián González Betancur B22877
+
+Ejercicio 1.
+- Asunciones sobre las entradas de la tabla de rutas:
+	- Cada router tiene un identificador, por simplicidad, digamos que es un número entero del 1 al 180, lo cual da como necesarios 1 byte.
+	- El costo en llegar a un router digamos que tendrá como máximo 255, entonces sería 1 byte.
+	- Se pide que haya un número de secuencia, como son muchos routers, asumamos que puede ser un número más alto, por lo que podemos limitarlo a 4 bytes.
+
+Link-State:
+
+Asumiendo lo anterior, tendríamos 180 (routers) * costo (bytes) + id (bytes) + secuencia (bytes) = 181bytes que en modelo link-state se van a enviar por router. Es decir, se intercambiarían 181 bytes * 179 rounter = 32399 bytes por cada actualización de las tablas de enrutamiento.
+
+Para calcular el ancho de banda necesario, calculamos la cantidad de bytes por segundo:
+
+32399 bytes / 120 ms = 269.99 bytes/ms lo cual es aproximadamente 270kB/s lo cual es aproximadamente 2.16Mbits/s
+
+
+Distance Vector Routing:
+
+En este caso la entrada es más reducida pues solo se tiene por entrada de la tabla el ID del vecino y la distancia. Es decir, serían 2 bytes. por lo tanto, cada router envía a sus 5 vecinos esos 2 bytes, dando como resultado 180 (routers) * 5 (vecinos) * 2 (bytes) = 1800 bytes
+
+Para lo cual, el ancho de banda sería: 1800 bytes / 120 ms = 15000 B/s = 120000 bits/s
+
+Ejercicio 2.
+Tanto el flood como el broadcast se parecen en que hacen un envío de información a toda la subred en la que se encuentran. Sin embargo, difieren en que el broadcast lo hace para comunicar algo a todos los dispositivos con multiples posibles significados, mientras que flooding no se centra en mandar un mensaje a cada dispositivo sin importar si le llega dos veces y la información siempre es la misma.
+
+Ejercicio 3.
+Split Horizon puede fallar cuando la comunicación con un nodo se corta pero no hay un cambio en un nodo que no se comunicaba directamente. Por ejemplo:
+
+Consideremos una red
+A --- B --- C
+
+Con tablas:
+
+A ========================================
+Destino		Conexión	Costo
+B		A---B		2
+C		A---B		5
+
+B ========================================
+Destino		Conexión	Costo
+A		B---A		2
+C		B---C		3
+
+C ========================================
+Destino		Conexión	Costo
+A		C---B		5
+B		C---B		3
+
+Si ocurre el caso de pérdida:
+A -x- B --- C
+
+Entonces ocurrirá qué:
+
+A ========================================
+Destino		Conexión	Costo
+	BORRADA CONEXIÓN CON B
+C		A---B		5
+
+
+B ========================================
+Destino		Conexión	Costo
+A		B---A		inf
+C		B---C		3
+
+C ========================================
+Destino		Conexión	Costo
+A		C---B		5
+B		C---B		3
+
+En las iteraciones siguientes el valor de C hacia A seguirá aumentando puesto que C aún no sabe que A es inalcanzable.
+
+Ejercicio 7.
+Las rutas desde D hacia las demás serían:
+
+DESTINO		RUTA		COSTO
+A		F-E-A		7
+B		F-B		3
+C		C		4
+E		F-E		5
+F		F		2
