@@ -1,0 +1,26 @@
+Task 3: Steps 2 y 3
+
+- No se logra obtener respuesta al hacer ping en ninguna dirección.
+
+Task 5: Step 1
+- R3 envía 224.0.0.9 via Loopback0 (172.30.110.1)
+- Se recibe 172.30.0.0/16 via 0.0.0.0 in 1 hops
+
+Task 7:
+- Desde R1: sending  v2 update to 224.0.0.9 via Serial0/0/0 (209.165.200.230) 172.30.1.0/24 via 0.0.0.0, metric 1, tag 0 y 172.30.2.0/24 via 0.0.0.0, metric 1, tag 0
+
+- En R2 desde R1: 172.30.1.0/24 via 0.0.0.0 in 1 hops y 172.30.2.0/24 via 0.0.0.0 in 1 hops
+- Correcto, ahora sí se están incluyendo las máscaras de las subredes.
+
+Task 8:
+Step 1:
+- Sending 5, 100-byte ICMP Echos to 172.30.100.0, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/11/19 ms
+
+- Sending 5, 100-byte ICMP Echos to 172.30.1.0, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/7/17 ms
+
+Step 2:
+No es posible, el success rate es de 0.
