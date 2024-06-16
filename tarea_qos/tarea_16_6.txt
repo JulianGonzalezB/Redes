@@ -1,0 +1,4 @@
+1. Si fuera la cola del medio y no la de abajo la que tuviera el doble de peso, el orden de finalización sería:
+	- A B D C F E G H
+
+2. Como la tasa de llenado del bucket es 1Mbps y la de consumo es 6Mbps, la tasa neta de consumo es de 5Mbps. Eso significa que si el bucket comienza con 8Mb, la computadora emitirá a 6Mbps durante 1.6 segundos (8Mb/5Mbs).
