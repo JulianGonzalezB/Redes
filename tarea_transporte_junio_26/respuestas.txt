@@ -1,0 +1,14 @@
+Tarea corta TRANSPORTE:
+
+6-15) El único cambio que ocurre es para el flujo A, de forma que en su segmento de R2 a R3 baja de 2/3 a 1/3, ya que R2 ahora tendrá que dedicar 1/3 para su nuevo flujo E de R2 a R6. Todos los demás permanecen iguales.
+
+6-20) 	Canal: 	1Mbps
+	A:	100 * 8 (bytes) / 0.001s = 800 kbps
+	B:	600 kbps
+	Requerido: 1.4Mbps
+
+Ya que se requiere más capacidad de la que tiene el canal, la comunicación TCP cederá un poco su tasa de envío, mientras que la comunicación UDP no. Por lo que A debería tener al final el mayor throughput.
+
+6-23) - Porque el número de proceso se asigna de forma impredecible en una máquina, por lo que para cualquier proceso que corra en otra máquina es imposible saber qué número de proceso tiene el proceso con el que quiere comunicarse. Comunicarse por puertos permite siempre conocer por dónde hablarle al proceso con el que quiero comunicarme.
+
+- Porque le da flexibilidad a la comunicación ya que puedo tener muchas instancias de un mismo programa o servicio escuchando por diferentes puertos y no dependo de comunicarme con un proceso en específico, sino quien sea la instancia que me esté escuchando es indiferente.
