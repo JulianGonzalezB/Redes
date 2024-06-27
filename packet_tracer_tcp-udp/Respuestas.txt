@@ -1,0 +1,34 @@
+7.b - A esto se le llama half-duplex
+- Los colores diferencias tipos de servicio o comunicación.
+
+Part 2:
+step 1: d- Se tarda mucho porque primero se tiene que generar la conexión con el handshake para luego ocurrir la comunicación HTTP
+
+e- Si se refiere a la penúltima sección, es la de TCP y sí se considera confiable. La última sección se llama HTTP REQUEST. No se considera confiable.
+
+f- Si son los 6 bits a la derecha de la b, están encendidos el RST y el SYN.
+
+h- Ambos permanecen igual.
+
+i- la secuencia es 103 y el puerto es el mismo, el 80.
+
+step 2: c- Sí
+d- es el RST
+
+f- La secuencia cambió, ahora es 0
+
+g- Todo queda igual
+
+i- el mensaje es Message:Welcome to PT Ftp server
+
+Step 3:
+d- el protocolo es UDP, no es reliable.
+
+e- no hay porque en UDP la filosofía res la del mejor esfuerzo, no se genera una conexión.
+
+g- Cambia el puerto del 1026 al 1027. La última sección se llama DNS answer. La ip es 192.168.1.254
+
+Step 4:
+d- Es TCP, sí es reliable.
+
+g- no cambió nada.
